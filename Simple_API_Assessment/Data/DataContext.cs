@@ -12,7 +12,7 @@ namespace Simple_API_Assessment.Data
         public DbSet<Applicant> Applicants { get; set; }
         public DbSet<Skill> Skills { get; set; }
 
-        // Seed data
+        // Seed data to the database when the application starts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Applicant>().HasData(
@@ -20,6 +20,7 @@ namespace Simple_API_Assessment.Data
                 new Applicant { Id = 2, Name = "Ofentse Sithole" }
             );
 
+            
             modelBuilder.Entity<Skill>().HasData(
                 new Skill { Id = 1, Name = "C#" },
                 new Skill { Id = 2, Name = "Java" },
