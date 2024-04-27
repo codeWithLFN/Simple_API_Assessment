@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using Simple_API_Assessment.Data;
+
 namespace Simple_API_Assessment
 {
     public class Program
@@ -8,6 +11,9 @@ namespace Simple_API_Assessment
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddDbContext<DataContext>(options =>
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
