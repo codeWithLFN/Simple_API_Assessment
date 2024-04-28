@@ -3,9 +3,9 @@
     public class Applicant
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         //Navigation Property for aplicant skills
-        public ICollection<Skill> Skills { get; set; }
+        public ICollection<Skill>? Skills { get; set; }
     }
 }

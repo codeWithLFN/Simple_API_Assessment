@@ -48,6 +48,29 @@ namespace Simple_API_Assessment.Migrations
                 name: "IX_Skills_ApplicantId",
                 table: "Skills",
                 column: "ApplicantId");
+
+           
+            // Seed data for Applicant
+            migrationBuilder.InsertData(
+                table: "Applicants",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Lufuno Nemudivhadi" },
+                    { 2, "Ofentse Sithole" }
+                });
+
+            // Seed data for Skill
+            migrationBuilder.InsertData(
+                table: "Skills",
+                columns: new[] { "Id", "Name", "ApplicantId" },
+                values: new object[,]
+                {
+                    { 1, "C#", 1 },
+                    { 2, "ASP.NET Core", 1 },
+                    { 3, "SQL Server", 2 }
+                });
+
         }
 
         /// <inheritdoc />
@@ -59,5 +82,8 @@ namespace Simple_API_Assessment.Migrations
             migrationBuilder.DropTable(
                 name: "Applicants");
         }
+
+        
+
     }
 }

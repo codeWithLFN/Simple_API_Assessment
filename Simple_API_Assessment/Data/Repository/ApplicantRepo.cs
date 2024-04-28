@@ -14,12 +14,15 @@ namespace Simple_API_Assessment.Data.Repository
 
         public async Task<List<Applicant>> GetAllApplicantsAsync()
         {
+            // Include the Skills navigation property to return the related skills for each applicant
             return await _context.Applicants.Include(a => a.Skills).ToListAsync();
         }
 
         public async Task<Applicant> GetApplicantAsync(int id)
         {
+            // Include the Skills navigation property to return the related skills for the applicant
             return await _context.Applicants.Include(a => a.Skills).FirstOrDefaultAsync(a => a.Id == id);
+            
         }
 
         public async Task CreateApplicantAsync(Applicant applicant)
