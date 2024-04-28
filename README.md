@@ -1,11 +1,14 @@
 ## Simple .Net API Assessment
 
-This repository contains a simple .NET API project developed to demonstrate understanding of C#, .NET framework, Entity Framework, database understanding, repository design pattern, and API development.
+This project demonstrates C#, .NET Framework, Entity Framework & Postgresql usage for CRUD on applicants (repository pattern).
 
-
-**Technologies:**
+**Tech Stack**
 
 - C#
 - .Net Framework
 - Entity Framework
 - Postgresql
+
+**Project Overview**
+
+This API establishes a connection to a PostgreSQL database, utilizes Entity Framework to manage data interactions, implements the repository design pattern for data access, and exposes endpoints for CRUD (Create, Read, Update, Delete) operations on applicant entities.
